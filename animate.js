@@ -122,10 +122,12 @@ if (y + radius > ch  || y - radius < 0){
     dy = -dy
 }
 
-//updating the location 
+//updating the location of pirates
 x += dx
 y += dy
 
+//gameplay conditions
+    
 if ( Math.round((Math.sqrt(Math.pow(stX - x, 2)+Math.pow(stY - y,2))) -
 10 - radius ) <= 0){
     dx = 0
@@ -134,16 +136,17 @@ if ( Math.round((Math.sqrt(Math.pow(stX - x, 2)+Math.pow(stY - y,2))) -
 
  c.fillStyle = "red"
     c.font = "40px Arial "
-    xScore = "Game Over! Pirates Got You!"
+    xScore = "Game Over!"
     c.fillText(xScore, 1,66)
-
+    xScore = "Pirates Got You!"
+    c.fillText(xScore, 1,120)
 
 }else if (  Math.round((Math.sqrt(Math.pow(stX - x, 2)+Math.pow(stY - y,2))) -
 stR - radius ) >= 0){
     visibleRadius = 0;
     c.fillStyle = "blue"
-    c.font = "50px Arial "
-    xScore = "Clear!"
+    c.font = "40px Arial "
+    xScore = "Clear! You are safe!"
     c.fillText(xScore, 1,66)
 
  
